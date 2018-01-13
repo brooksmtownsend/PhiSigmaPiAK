@@ -6,6 +6,7 @@ import Feed from '../screens/Feed';
 import Settings from '../screens/Settings';
 import UserDetail from '../screens/UserDetail';
 import Me from '../screens/Me';
+import MeToo from '../screens/MeToo';
 
 export const FeedStack = StackNavigator({
   Feed: {
@@ -33,7 +34,14 @@ export const Tabs = TabNavigator({
   Me: {
     screen: Me,
     navigationOptions: {
-      tabBarLabel: 'Me',
+      tabBarLabel: 'me',
+      tabBarIcon: ({ tintColor }) => <Icon name="account-circle" size={35} color={tintColor} />
+    },
+  },
+  MeToo: {
+    screen: MeToo,
+    navigationOptions: {
+      tabBarLabel: 'meme',
       tabBarIcon: ({ tintColor }) => <Icon name="account-circle" size={35} color={tintColor} />
     },
   },
