@@ -24,25 +24,39 @@ export const FeedStack = StackNavigator({
 });
 
 export const Tabs = TabNavigator({
+  ChapUp: {
+    screen: MeToo,
+    navigationOptions: {
+      tabBarLabel: 'Chap-Up',
+      tabBarIcon: ({ tintColor }) => <Icon name="update" size={35} color={tintColor} />
+    },
+  },
   YellowPages: {
     screen: FeedStack,
     navigationOptions: {
       tabBarLabel: 'Yellow Pages',
-      tabBarIcon: ({ tintColor }) => <Icon name="list" size={35} color={tintColor} />,
+      tabBarIcon: ({ tintColor }) => <Icon name="perm-contact-calendar" size={30} color={tintColor} />,
     },
   },
-  Me: {
+  Attendance: {
     screen: Me,
     navigationOptions: {
-      tabBarLabel: 'me',
-      tabBarIcon: ({ tintColor }) => <Icon name="account-circle" size={35} color={tintColor} />
+      tabBarLabel: 'Attendance',
+      tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={tintColor} />
     },
   },
-  MeToo: {
-    screen: MeToo,
+  Voting: {
+    screen: Me,
     navigationOptions: {
-      tabBarLabel: 'meme',
-      tabBarIcon: ({ tintColor }) => <Icon name="account-circle" size={35} color={tintColor} />
+      tabBarLabel: 'Voting',
+      tabBarIcon: ({ tintColor }) => <Icon name="check" size={35} color={tintColor} />
+    },
+  },
+  ImportantLinks: {
+    screen: Me,
+    navigationOptions: {
+      tabBarLabel: 'Links',
+      tabBarIcon: ({ tintColor }) => <Icon name="link" size={35} color={tintColor} />
     },
   },
 });

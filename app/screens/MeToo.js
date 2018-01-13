@@ -11,7 +11,7 @@ class Me extends Component {
   render() {
     return (
       <View> 
-        <Text>{"It's friday my dudes"}</Text>
+        <Text>{"Chapter Updates coming here soon!"}</Text>
       </View>
     );
   }
