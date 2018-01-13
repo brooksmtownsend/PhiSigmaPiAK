@@ -19,7 +19,7 @@ export const FeedStack = StackNavigator({
     screen: UserDetail,
     navigationOptions: ({ navigation }) => ({
       // title: `${navigation.state.params.name.first.toUpperCase()} ${navigation.state.params.name.last.toUpperCase()}`,
-      title: 'test',
+      title: 'Abby Hall',
     }),
   },
 });
