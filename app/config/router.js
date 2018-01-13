@@ -6,7 +6,6 @@ import YellowPages from '../screens/YellowPages';
 import Settings from '../screens/Settings';
 import UserDetail from '../screens/UserDetail';
 import Me from '../screens/Me';
-import Calendar from '../screens/Calendar'
 import MeToo from '../screens/MeToo';
 
 export const FeedStack = StackNavigator({
@@ -19,12 +18,7 @@ export const FeedStack = StackNavigator({
   Details: {
     screen: UserDetail,
     navigationOptions: ({ navigation }) => ({
-<<<<<<< HEAD
-      // title: `${navigation.state.params.name.first.toUpperCase()} ${navigation.state.params.name.last.toUpperCase()}`,
-      title: 'Abby Hall',
-=======
       title: navigation.state.params.FirstName + " " + navigation.state.params.LastName,
->>>>>>> e51c0f079c5c78edab7ea30e993ddbaffc3f6214
     }),
   },
 });
@@ -51,11 +45,11 @@ export const Tabs = TabNavigator({
       tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={tintColor} />
     },
   },
-  Calendar: {
-    screen: Calendar,
+  Voting: {
+    screen: Me,
     navigationOptions: {
-      tabBarLabel: 'Calendar',
-      tabBarIcon: ({ tintColor }) => <Icon name="calendar" size={35} color={tintColor} />
+      tabBarLabel: 'Voting',
+      tabBarIcon: ({ tintColor }) => <Icon name="check" size={35} color={tintColor} />
     },
   },
   ImportantLinks: {
