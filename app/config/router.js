@@ -9,6 +9,7 @@ import Attendance from '../screens/Attendance';
 import Calendar from '../screens/Calendar';
 import Me from '../screens/Me';
 import MeToo from '../screens/MeToo';
+import UsefulLinks from '../screens/UsefulLinks';
 
 export const FeedStack = StackNavigator({
   YellowPages: {
@@ -55,7 +56,7 @@ export const Tabs = TabNavigator({
     },
   },
   ImportantLinks: {
-    screen: Me,
+    screen: UsefulLinks,
     navigationOptions: {
       tabBarLabel: 'Links',
       tabBarIcon: ({ tintColor }) => <Icon name="link" size={35} color={tintColor} />
