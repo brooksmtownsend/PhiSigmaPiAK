@@ -12,7 +12,7 @@ export const FeedStack = StackNavigator({
   Feed: {
     screen: Feed,
     navigationOptions: {
-      title: 'Feed',
+      title: 'Yellow Pages',
     },
   },
   Details: {
@@ -27,7 +27,7 @@ export const Tabs = TabNavigator({
   Feed: {
     screen: FeedStack,
     navigationOptions: {
-      tabBarLabel: 'Feed',
+      tabBarLabel: 'Yellow Pages',
       tabBarIcon: ({ tintColor }) => <Icon name="list" size={35} color={tintColor} />,
     },
   },
