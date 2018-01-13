@@ -10,7 +10,7 @@ class UserDetail extends Component {
     const email = params.Email;
     const phone = params.PhoneNumber;
     const iClass = params.InitiateClass;
-    const picture = "https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/23031477_10210642345519344_1603292286207758824_n.jpg?oh=1feea7237a3312b8e4ff0510f0b80f24&oe=5AFCCC81";
+    const picture = params.PictureURL;
 
     return (
       <ScrollView>

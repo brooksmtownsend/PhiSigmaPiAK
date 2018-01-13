@@ -50,7 +50,7 @@ export const Tabs = TabNavigator({
     screen: Calendar,
     navigationOptions: {
       tabBarLabel: 'Calendar',
-      tabBarIcon: ({ tintColor }) => <Icon name="calendar" size={35} color={tintColor} />
+      tabBarIcon: ({ tintColor }) => <Icon name="event-note" size={31} color={tintColor} />
     },
   },
   ImportantLinks: {
