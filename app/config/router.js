@@ -5,6 +5,8 @@ import { Icon } from 'react-native-elements';
 import YellowPages from '../screens/YellowPages';
 import Settings from '../screens/Settings';
 import UserDetail from '../screens/UserDetail';
+import Attendance from '../screens/Attendance';
+import Calendar from '../screens/Calendar';
 import Me from '../screens/Me';
 import MeToo from '../screens/MeToo';
 
@@ -39,14 +41,14 @@ export const Tabs = TabNavigator({
     },
   },
   Attendance: {
-    screen: Me,
+    screen: Attendance,
     navigationOptions: {
       tabBarLabel: 'Attendance',
       tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={tintColor} />
     },
   },
-  Voting: {
-    screen: Me,
+  Calendar: {
+    screen: Calendar,
     navigationOptions: {
       tabBarLabel: 'Calendar',
       tabBarIcon: ({ tintColor }) => <Icon name="event-note" size={31} color={tintColor} />
