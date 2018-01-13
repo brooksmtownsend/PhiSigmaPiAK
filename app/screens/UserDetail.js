@@ -4,16 +4,20 @@ import { Tile, List, ListItem } from 'react-native-elements';
 
 class UserDetail extends Component {
   render() {
-    const { picture, name, email, phone, login, dob, location } = this.props.navigation.state.params;
+    const params = this.props.navigation.state.params;
+    const name = params.FirstName + " " + params.LastName;
+    const email = params.Email;
+    const phone = params.PhoneNumber;
+    const picture = params.Picture;
 
     return (
       <ScrollView>
-        <Tile
-          imageSrc={{ uri: picture.large}}
+        {<Tile
+          imageSrc={{ uri: picture}}
           featured
-          title={`${name.first.toUpperCase()} ${name.last.toUpperCase()}`}
+          title={name}
           caption={email}
-        />
+        />}
 
         <List>
           <ListItem
@@ -28,7 +32,7 @@ class UserDetail extends Component {
           />
         </List>
 
-        <List>
+        {/* <List>
           <ListItem
             title="Username"
             rightTitle={login.username}
@@ -47,7 +51,7 @@ class UserDetail extends Component {
             rightTitle={location.city}
             hideChevron
           />
-        </List>
+        </List> */}
       </ScrollView>
     );
   }

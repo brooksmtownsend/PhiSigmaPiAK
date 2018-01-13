@@ -35,6 +35,7 @@ class Feed extends Component {
               key={person.Email}
               title={person.FirstName + " " + person.LastName}
               subtitle={person.Email}
+              onPress={() => this.onLearnMore(person)}
               />
           ))}
         </List>
