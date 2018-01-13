@@ -48,8 +48,8 @@ export const Tabs = TabNavigator({
   Voting: {
     screen: Me,
     navigationOptions: {
-      tabBarLabel: 'Voting',
-      tabBarIcon: ({ tintColor }) => <Icon name="check" size={35} color={tintColor} />
+      tabBarLabel: 'Calendar',
+      tabBarIcon: ({ tintColor }) => <Icon name="event-note" size={31} color={tintColor} />
     },
   },
   ImportantLinks: {
