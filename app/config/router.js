@@ -6,6 +6,7 @@ import YellowPages from '../screens/YellowPages';
 import Settings from '../screens/Settings';
 import UserDetail from '../screens/UserDetail';
 import Me from '../screens/Me';
+import Calendar from '../screens/Calendar'
 import MeToo from '../screens/MeToo';
 
 export const FeedStack = StackNavigator({
@@ -45,11 +46,11 @@ export const Tabs = TabNavigator({
       tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={tintColor} />
     },
   },
-  Voting: {
-    screen: Me,
+  Calendar: {
+    screen: Calendar,
     navigationOptions: {
-      tabBarLabel: 'Voting',
-      tabBarIcon: ({ tintColor }) => <Icon name="check" size={35} color={tintColor} />
+      tabBarLabel: 'Calendar',
+      tabBarIcon: ({ tintColor }) => <Icon name="calendar" size={35} color={tintColor} />
     },
   },
   ImportantLinks: {
