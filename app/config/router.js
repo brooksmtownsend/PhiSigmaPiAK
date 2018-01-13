@@ -2,15 +2,15 @@ import React from 'react';
 import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 
-import Feed from '../screens/Feed';
+import YellowPages from '../screens/YellowPages';
 import Settings from '../screens/Settings';
 import UserDetail from '../screens/UserDetail';
 import Me from '../screens/Me';
 import MeToo from '../screens/MeToo';
 
 export const FeedStack = StackNavigator({
-  Feed: {
-    screen: Feed,
+  YellowPages: {
+    screen: YellowPages,
     navigationOptions: {
       title: 'Yellow Pages',
     },
@@ -25,7 +25,7 @@ export const FeedStack = StackNavigator({
 });
 
 export const Tabs = TabNavigator({
-  Feed: {
+  YellowPages: {
     screen: FeedStack,
     navigationOptions: {
       tabBarLabel: 'Yellow Pages',

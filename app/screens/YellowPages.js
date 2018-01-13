@@ -9,7 +9,7 @@ import { List, ListItem } from 'react-native-elements';
 import { users } from '../config/data';
 import { directory } from '../data/directory'
 
-class Feed extends Component {
+class YellowPages extends Component {
   onLearnMore = (user) => {
     this.props.navigation.navigate('Details', { ...user });
   };
@@ -44,4 +44,4 @@ class Feed extends Component {
   }
 }
 
-export default Feed;
+export default YellowPages;
