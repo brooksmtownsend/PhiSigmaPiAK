@@ -10,7 +10,7 @@ class Me extends Component {
 
   render() {
     return (
-      <View> 
+      <View style={{marginTop: 20}}> 
         <Text>{"Chapter Updates coming here soon!"}</Text>
       </View>
     );
