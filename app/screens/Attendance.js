@@ -3,7 +3,7 @@ import { WebView } from 'react-native';
 
 class Attendance extends Component {
   render() {
-    const attendance = 'https://pspattendance.web.unc.edu/';
+    const attendance = 'http://beotia.com/phisigmapi/';
     return (
       <WebView
         source={{uri: attendance}}
