@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import { WebView } from 'react-native';
+import { View, Text, WebView } from 'react-native';
 
 class Attendance extends Component {
   render() {
-    const attendance = 'http://beotia.com/phisigmapi/';
+    const attendance = '';
     return (
-      <WebView
-        source={{uri: attendance}}
-        style={{marginTop: 20}}
-      />
+      <View style={{marginTop: 20}}>
+        <Text> Future home of interactive attendance </Text>
+        <WebView
+          source={{uri: attendance}}
+          style={{marginTop: 20}}
+        />
+      </View>
     )
   }
 }
