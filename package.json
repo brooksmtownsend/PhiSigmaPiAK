@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "auth0-js": "^9.1.0",
     "exp": "^47.4.4",
     "react": "16.0.0",
     "react-native": "0.51.0",
