@@ -8,7 +8,7 @@ import UserDetail from '../screens/UserDetail';
 import Attendance from '../screens/Attendance';
 import Calendar from '../screens/Calendar';
 import Me from '../screens/Me';
-import MeToo from '../screens/MeToo';
+import ChapUp from '../screens/ChapUp';
 import UsefulLinks from '../screens/UsefulLinks';
 
 export const FeedStack = StackNavigator({
@@ -28,7 +28,7 @@ export const FeedStack = StackNavigator({
 
 export const Tabs = TabNavigator({
   ChapUp: {
-    screen: MeToo,
+    screen: ChapUp,
     navigationOptions: {
       tabBarLabel: 'Chap-Up',
       tabBarIcon: ({ tintColor }) => <Icon name="update" size={35} color={tintColor} />
