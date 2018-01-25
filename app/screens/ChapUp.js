@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, WebView } from 'react-native';
 import { Tile, List, ListItem, Button } from 'react-native-elements';
 import { me } from '../config/data';
 
@@ -10,9 +10,9 @@ class ChapUp extends Component {
 
   render() {
     return (
-      <View style={{marginTop: 20}}> 
-        <Text>{"Chapter Updates coming here soon!"}</Text>
-      </View>
+      <WebView
+        source={{uri: 'https://phisigmapi.web.unc.edu/chapter-updates/'}}
+      />
     );
   }
 }

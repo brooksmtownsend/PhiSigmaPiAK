@@ -18,7 +18,7 @@ export default class Attendance extends Component {
 
   render() {
     return (
-      <Text> QR Code stuff coming here later as soon as i can test on mobile </Text>
+      <Text style={{marginTop: 20}}> QR Code stuff coming here later as soon as i can test on mobile </Text>
       // <NavigatorIOS
       //   initialRoute={{
       //     component: QRCodeScanner,
