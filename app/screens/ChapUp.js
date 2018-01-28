@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, WebView } from 'react-native';
 import { Tile, List, ListItem, Button } from 'react-native-elements';
-import { me } from '../config/data';
 
 class ChapUp extends Component {
   handleSettingsPress = () => {
@@ -16,7 +15,5 @@ class ChapUp extends Component {
     );
   }
 }
-
-ChapUp.defaultProps = { ...me };
 
 export default ChapUp;

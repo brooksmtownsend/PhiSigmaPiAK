@@ -7,7 +7,6 @@ import Settings from '../screens/Settings';
 import UserDetail from '../screens/UserDetail';
 import Attendance from '../screens/Attendance';
 import Calendar from '../screens/Calendar';
-import Me from '../screens/Me';
 import ChapUp from '../screens/ChapUp';
 import UsefulLinks from '../screens/UsefulLinks';
 

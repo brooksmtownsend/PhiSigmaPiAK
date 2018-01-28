@@ -17,8 +17,8 @@ class UserDetail extends Component {
         {<Tile
           imageSrc={{ uri: picture}}
           featured
-          title={name}
-          caption={email}
+          title={''}
+          caption={''}
         />}
 
         <List>
