@@ -26,13 +26,13 @@ export const FeedStack = StackNavigator({
 });
 
 export const Tabs = TabNavigator({
-  ChapUp: {
-    screen: ChapUp,
-    navigationOptions: {
-      tabBarLabel: 'Chap-Up',
-      tabBarIcon: ({ tintColor }) => <Icon name="update" size={35} color={tintColor} />
-    },
-  },
+  // ChapUp: {
+  //   screen: ChapUp,
+  //   navigationOptions: {
+  //     tabBarLabel: 'Chap-Up',
+  //     tabBarIcon: ({ tintColor }) => <Icon name="update" size={35} color={tintColor} />
+  //   },
+  // },
   YellowPages: {
     screen: FeedStack,
     navigationOptions: {
@@ -40,20 +40,20 @@ export const Tabs = TabNavigator({
       tabBarIcon: ({ tintColor }) => <Icon name="perm-contact-calendar" size={30} color={tintColor} />,
     },
   },
-  Attendance: {
-    screen: Attendance,
-    navigationOptions: {
-      tabBarLabel: 'Attendance',
-      tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={tintColor} />
-    },
-  },
-  Calendar: {
-    screen: Calendar,
-    navigationOptions: {
-      tabBarLabel: 'Calendar',
-      tabBarIcon: ({ tintColor }) => <Icon name="event-note" size={31} color={tintColor} />
-    },
-  },
+  // Attendance: {
+  //   screen: Attendance,
+  //   navigationOptions: {
+  //     tabBarLabel: 'Attendance',
+  //     tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={tintColor} />
+  //   },
+  // },
+  // Calendar: {
+  //   screen: Calendar,
+  //   navigationOptions: {
+  //     tabBarLabel: 'Calendar',
+  //     tabBarIcon: ({ tintColor }) => <Icon name="event-note" size={31} color={tintColor} />
+  //   },
+  // },
   ImportantLinks: {
     screen: UsefulLinks,
     navigationOptions: {
