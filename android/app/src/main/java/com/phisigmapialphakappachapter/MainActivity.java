@@ -1,4 +1,4 @@
-package com.firstlookreactnavigation;
+package com.phisigmapialphakappachapter;
 
 import com.facebook.react.ReactActivity;
 
