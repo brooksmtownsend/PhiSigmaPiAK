@@ -47,13 +47,6 @@ export const Tabs = TabNavigator({
   //     tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={tintColor} />
   //   },
   // },
-  // Calendar: {
-  //   screen: Calendar,
-  //   navigationOptions: {
-  //     tabBarLabel: 'Calendar',
-  //     tabBarIcon: ({ tintColor }) => <Icon name="event-note" size={31} color={tintColor} />
-  //   },
-  // },
   ImportantLinks: {
     screen: UsefulLinks,
     navigationOptions: {
