@@ -3,11 +3,8 @@ import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 
 import YellowPages from '../screens/YellowPages';
-import Settings from '../screens/Settings';
 import UserDetail from '../screens/UserDetail';
 import Attendance from '../screens/Attendance';
-import Calendar from '../screens/Calendar';
-import ChapUp from '../screens/ChapUp';
 import UsefulLinks from '../screens/UsefulLinks';
 
 export const FeedStack = StackNavigator({
@@ -26,13 +23,6 @@ export const FeedStack = StackNavigator({
 });
 
 export const Tabs = TabNavigator({
-  // ChapUp: {
-  //   screen: ChapUp,
-  //   navigationOptions: {
-  //     tabBarLabel: 'Chap-Up',
-  //     tabBarIcon: ({ tintColor }) => <Icon name="update" size={35} color={tintColor} />
-  //   },
-  // },
   YellowPages: {
     screen: FeedStack,
     navigationOptions: {
@@ -56,21 +46,9 @@ export const Tabs = TabNavigator({
   },
 });
 
-export const SettingsStack = StackNavigator({
-  Settings: {
-    screen: Settings,
-    navigationOptions: {
-      title: 'Settings',
-    },
-  },
-});
-
 export const Root = StackNavigator({
   Tabs: {
     screen: Tabs,
-  },
-  Settings: {
-    screen: SettingsStack,
   },
 }, {
   mode: 'modal',
