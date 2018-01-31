@@ -40,13 +40,13 @@ export const Tabs = TabNavigator({
       tabBarIcon: ({ tintColor }) => <Icon name="perm-contact-calendar" size={30} color={tintColor} />,
     },
   },
-  // Attendance: {
-  //   screen: Attendance,
-  //   navigationOptions: {
-  //     tabBarLabel: 'Attendance',
-  //     tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={tintColor} />
-  //   },
-  // },
+  Attendance: {
+    screen: Attendance,
+    navigationOptions: {
+      tabBarLabel: 'Attendance',
+      tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={tintColor} />
+    },
+  },
   ImportantLinks: {
     screen: UsefulLinks,
     navigationOptions: {
