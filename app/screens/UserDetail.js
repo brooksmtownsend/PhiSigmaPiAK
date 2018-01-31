@@ -46,27 +46,6 @@ class UserDetail extends Component {
             hideChevron
           />
         </List>
-
-        {/* <List>
-          <ListItem
-            title="Username"
-            rightTitle={login.username}
-            hideChevron
-          />
-        </List>
-
-        <List>
-          <ListItem
-            title="Birthday"
-            rightTitle={dob}
-            hideChevron
-          />
-          <ListItem
-            title="City"
-            rightTitle={location.city}
-            hideChevron
-          />
-        </List> */}
       </ScrollView>
     );
   }
