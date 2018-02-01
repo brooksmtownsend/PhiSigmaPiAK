@@ -25,7 +25,7 @@ class UsefulLinks extends Component {
   render() {
     const usefullinks = 'https://phisigmapi.web.unc.edu/useful-links/';
     return (
-      <View style={{flex:1}}>
+      <View style={{flex:1, paddingTop: 20}}>
         <WebView
           ref={(ref) => this.WEBVIEW_REF = ref}
           style={{flex: 1}}

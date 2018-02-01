@@ -34,6 +34,7 @@ export const Tabs = TabNavigator({
   Attendance: {
     screen: Attendance,
     navigationOptions: {
+      title: 'Attendance',
       tabBarLabel: 'Attendance',
       tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={backgroundColor='#fff'} />,
       swipeEnabled: false
@@ -42,6 +43,7 @@ export const Tabs = TabNavigator({
   ImportantLinks: {
     screen: UsefulLinks,
     navigationOptions: {
+      title: 'Important Links',
       tabBarLabel: 'Links',
       tabBarIcon: ({ tintColor }) => <Icon name="link" size={35} color={backgroundColor='#fff'} />,
       swipeEnabled: false
@@ -53,8 +55,7 @@ export const Tabs = TabNavigator({
     activeTintColor: '#fff',
     inactiveTintColor: '#fff',
     tabStyle: {
-      backgroundColor: "#0D6275",
-      swipeEnabled : false,
+      backgroundColor: "#0D6275"
     } 
 }}
 );
