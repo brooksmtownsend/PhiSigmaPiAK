@@ -28,23 +28,33 @@ export const Tabs = TabNavigator({
     navigationOptions: {
       tabBarLabel: 'Yellow Pages',
       tabBarIcon: ({ tintColor }) => <Icon name="perm-contact-calendar" size={30} color={tintColor} />,
+      swipeEnabled: false
     },
   },
   Attendance: {
     screen: Attendance,
     navigationOptions: {
       tabBarLabel: 'Attendance',
-      tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={tintColor} />
+      tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={tintColor} />,
+      swipeEnabled: false
     },
   },
   ImportantLinks: {
     screen: UsefulLinks,
     navigationOptions: {
       tabBarLabel: 'Links',
-      tabBarIcon: ({ tintColor }) => <Icon name="link" size={35} color={tintColor} />
+      tabBarIcon: ({ tintColor }) => <Icon name="link" size={35} color={tintColor} />,
+      swipeEnabled: false
+
     },
   },
-});
+}, {
+  tabBarOptions:{
+        tabStyle: {
+      backgroundColor: "#0D6275",
+      swipeEnabled : false} 
+}}
+);
 
 export const Root = StackNavigator({
   Tabs: {
