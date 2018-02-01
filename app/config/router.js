@@ -27,7 +27,7 @@ export const Tabs = TabNavigator({
     screen: FeedStack,
     navigationOptions: {
       tabBarLabel: 'Yellow Pages',
-      tabBarIcon: ({ tintColor }) => <Icon name="perm-contact-calendar" size={30} color={tintColor} />,
+      tabBarIcon: ({ tintColor }) => <Icon name="perm-contact-calendar" size={30} color={backgroundColor='#fff'} />,
       swipeEnabled: false
     },
   },
@@ -35,7 +35,7 @@ export const Tabs = TabNavigator({
     screen: Attendance,
     navigationOptions: {
       tabBarLabel: 'Attendance',
-      tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={tintColor} />,
+      tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={backgroundColor='#fff'} />,
       swipeEnabled: false
     },
   },
@@ -43,16 +43,19 @@ export const Tabs = TabNavigator({
     screen: UsefulLinks,
     navigationOptions: {
       tabBarLabel: 'Links',
-      tabBarIcon: ({ tintColor }) => <Icon name="link" size={35} color={tintColor} />,
+      tabBarIcon: ({ tintColor }) => <Icon name="link" size={35} color={backgroundColor='#fff'} />,
       swipeEnabled: false
 
     },
   },
 }, {
   tabBarOptions:{
-        tabStyle: {
+    activeTintColor: '#fff',
+    inactiveTintColor: '#fff',
+    tabStyle: {
       backgroundColor: "#0D6275",
-      swipeEnabled : false} 
+      swipeEnabled : false,
+    } 
 }}
 );
 
