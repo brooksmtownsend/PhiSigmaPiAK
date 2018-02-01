@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, WebView, TextInput, Button } from 'react-native';
+import { View, Text, WebView, TextInput, Button, TouchableOpacity } from 'react-native';
 
 export default class Attendance extends Component {
 
@@ -7,8 +7,19 @@ export default class Attendance extends Component {
     super();
     this.state = {
       uriPath: '',
-      shouldRenderWebView: false
+      shouldRenderWebView: false,
+      canGoBack: false
     };
+  }
+
+  onNavigationStateChange(navState) {
+    this.setState({
+      canGoBack: navState.canGoBack
+    });
+  }
+
+  onBack() {
+    this.refs[WEBVIEW_REF].goBack();
   }
 
   render() {
@@ -28,7 +39,8 @@ export default class Attendance extends Component {
         />
         {this.state.shouldRenderWebView && <WebView
           source={{uri:'https://tinyurl.com/' + this.state.uriPath}}
-          style={{marginTop:20, flex:1}} /> }
+          style={{marginTop:20, flex:1}}
+        /> }
       </View>
     );
   }
