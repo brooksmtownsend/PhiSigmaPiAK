@@ -42,8 +42,9 @@ class UsefulLinks extends Component {
             <Text style={{fontSize: 20, 
               backgroundColor: 'rgb(247, 247, 247)', 
               padding: 3, 
-              paddingLeft: 10, 
-              color: 'rgb(100, 23, 180)'}}> {'🅱️ack 😤🤔😩'} </Text>
+              paddingLeft: 10,
+              color: 'rgb(100, 23, 180)'}}> {'🅱️ack'}</Text>
+            <Text style={{backgroundColor: 'rgb(247, 247, 247)', color: '#000', fontSize: 15, fontFamily: "System"}}> Protected links password: squirrelschool</Text>
           </TouchableOpacity>
         </View>
       </View>
