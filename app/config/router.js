@@ -24,27 +24,13 @@ export const FeedStack = StackNavigator({
   },
 });
 
-const tabStyles = StyleSheet.create({
-  ...Platform.select({
-    android: {
-      activeTintColor: '#fff',
-      inactiveTintColor: '#fff',
-      tabStyle: {
-        backgroundColor: "#0D6275"
-      } 
-    },
-    ios: {
-    }
-  })
-})
-
 // Tabs is the main component of our Application, which currently serves YellowPages, Attendance, and Important Links
 export const Tabs = TabNavigator({
   YellowPages: {
     screen: FeedStack,
     navigationOptions: {
       tabBarLabel: 'Yellow Pages',
-      tabBarIcon: ({ tintColor }) => <Icon name="perm-contact-calendar" size={30} color={backgroundColor='#fff'} />,
+      tabBarIcon: ({ tintColor }) => <Icon name="perm-contact-calendar" size={30} color={backgroundColor='#0D6275'} />,
       swipeEnabled: false
     },
   },
@@ -53,7 +39,7 @@ export const Tabs = TabNavigator({
     navigationOptions: {
       title: 'Attendance',
       tabBarLabel: 'Attendance',
-      tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={backgroundColor='#fff'} />,
+      tabBarIcon: ({ tintColor }) => <Icon name="group" size={35} color={backgroundColor='#0D6275'} />,
       swipeEnabled: false
     },
   },
@@ -62,13 +48,25 @@ export const Tabs = TabNavigator({
     navigationOptions: {
       title: 'Important Links',
       tabBarLabel: 'Links',
-      tabBarIcon: ({ tintColor }) => <Icon name="link" size={35} color={backgroundColor='#fff'} />,
+      tabBarIcon: ({ tintColor }) => <Icon name="link" size={35} color={backgroundColor="#0D6275"} />,
       swipeEnabled: false
     },
   },
 }, {
   tabBarOptions:{
-    tabStyles
+    ...Platform.select({
+        android: {
+          activeTintColor: '#fff',
+          inactiveTintColor: '#fff',
+          tabStyle: {
+            backgroundColor: "#0D6275"
+          } 
+        },
+        ios: {
+          activeTintColor: '#0D6275',
+          inactiveTintColor: '#0D6275',
+        }
+      })
   }}
 );
 
