@@ -1,4 +1,5 @@
 import React from 'react';
+import { Platform, StyleSheet } from 'react-native'
 import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 
@@ -6,16 +7,6 @@ import YellowPages from '../screens/YellowPages';
 import UserDetail from '../screens/UserDetail';
 import Attendance from '../screens/Attendance';
 import UsefulLinks from '../screens/UsefulLinks';
-
-// Root uses the StackNavigator to serve our Tabs
-export const Root = StackNavigator({
-  Tabs: {
-    screen: Tabs,
-  },
-}, {
-  mode: 'modal',
-  headerMode: 'none',
-});
 
 // FeedStack is a StackNavigator to handle our YellowPages view with navigation to UserDetails
 export const FeedStack = StackNavigator({
@@ -32,6 +23,20 @@ export const FeedStack = StackNavigator({
     }),
   },
 });
+
+const tabStyles = StyleSheet.create({
+  ...Platform.select({
+    android: {
+      activeTintColor: '#fff',
+      inactiveTintColor: '#fff',
+      tabStyle: {
+        backgroundColor: "#0D6275"
+      } 
+    },
+    ios: {
+    }
+  })
+})
 
 // Tabs is the main component of our Application, which currently serves YellowPages, Attendance, and Important Links
 export const Tabs = TabNavigator({
@@ -59,15 +64,20 @@ export const Tabs = TabNavigator({
       tabBarLabel: 'Links',
       tabBarIcon: ({ tintColor }) => <Icon name="link" size={35} color={backgroundColor='#fff'} />,
       swipeEnabled: false
-
     },
   },
 }, {
   tabBarOptions:{
-    activeTintColor: '#fff',
-    inactiveTintColor: '#fff',
-    tabStyle: {
-      backgroundColor: "#0D6275"
-    } 
-}}
+    tabStyles
+  }}
 );
+
+// Root uses the StackNavigator to serve our Tabs
+export const Root = StackNavigator({
+  Tabs: {
+    screen: Tabs,
+  },
+}, {
+  mode: 'modal',
+  headerMode: 'none',
+});
