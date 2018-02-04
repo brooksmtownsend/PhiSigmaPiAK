@@ -3,7 +3,8 @@ import { Text, View, TouchableOpacity, WebView } from 'react-native';
 
 class UsefulLinks extends Component {
 
-  WEBVIEW_REF = null;
+  // Reference to allow navigating back in the WebView
+  WebViewReference = null;
 
   constructor() {
     super();
@@ -19,7 +20,7 @@ class UsefulLinks extends Component {
   }
 
   onBack() {
-    this.WEBVIEW_REF.goBack();
+    this.WebViewReference.goBack();
   }
 
   render() {
@@ -27,7 +28,7 @@ class UsefulLinks extends Component {
     return (
       <View style={{flex:1, paddingTop: 20}}>
         <WebView
-          ref={(ref) => this.WEBVIEW_REF = ref}
+          ref={(ref) => this.WebViewReference = ref}
           style={{flex: 1}}
           onNavigationStateChange={this.onNavigationStateChange.bind(this)}
           source={{uri: usefullinks}}
@@ -36,9 +37,13 @@ class UsefulLinks extends Component {
         <View>
           <TouchableOpacity
             disabled={!this.state.canGoBack}
-            onPress={this.onBack.bind(this)}
-            >
-            <Text style={{fontSize: 20, backgroundColor: 'rgb(247, 247, 247)', padding: 3, paddingLeft: 10, color: 'rgb(100, 23, 180)'}}> {'🅱️ack 😤🤔😩'} </Text>
+            onPress={this.onBack.bind(this)}>
+            
+            <Text style={{fontSize: 20, 
+              backgroundColor: 'rgb(247, 247, 247)', 
+              padding: 3, 
+              paddingLeft: 10, 
+              color: 'rgb(100, 23, 180)'}}> {'🅱️ack 😤🤔😩'} </Text>
           </TouchableOpacity>
         </View>
       </View>
