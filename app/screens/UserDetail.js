@@ -3,6 +3,11 @@ import { ScrollView } from 'react-native';
 import { Tile, List, ListItem } from 'react-native-elements';
 
 class UserDetail extends Component {
+
+  /**
+   * this.props.navigation.state.params is an object that contains all of the fields from directory.js, namely:
+   * FirstName, LastName, PreferredPronouns, Email, PhoneNumber, InitiateClass, PictureUrl
+   */
   render() {
     const params = this.props.navigation.state.params;
     const name = params.FirstName + " " + params.LastName;

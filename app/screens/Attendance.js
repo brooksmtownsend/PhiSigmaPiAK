@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { View, Text, WebView, TextInput, Button, TouchableOpacity, Keyboard } from 'react-native';
 
+/**
+ * Attendance is our component for PSP event sign-in
+ * State is composed of:
+ * uriPath: Attendance code and TinyURL postfix
+ * shouldRenderWebView: When true will render WebView, starts false and changes upon clicking the button
+ */
 export default class Attendance extends Component {
 
   constructor() {
@@ -8,20 +14,10 @@ export default class Attendance extends Component {
     this.state = {
       uriPath: '',
       shouldRenderWebView: false,
-      canGoBack: false
     };
   }
 
-  onNavigationStateChange(navState) {
-    this.setState({
-      canGoBack: navState.canGoBack
-    });
-  }
-
-  onBack() {
-    this.refs[WEBVIEW_REF].goBack();
-  }
-
+  // Callback function that is called when the button is pressed, or TextInput is done editing.
   renderWebView() {
     Keyboard.dismiss();
     this.setState({shouldRenderWebView: true});

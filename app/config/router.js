@@ -7,6 +7,17 @@ import UserDetail from '../screens/UserDetail';
 import Attendance from '../screens/Attendance';
 import UsefulLinks from '../screens/UsefulLinks';
 
+// Root uses the StackNavigator to serve our Tabs
+export const Root = StackNavigator({
+  Tabs: {
+    screen: Tabs,
+  },
+}, {
+  mode: 'modal',
+  headerMode: 'none',
+});
+
+// FeedStack is a StackNavigator to handle our YellowPages view with navigation to UserDetails
 export const FeedStack = StackNavigator({
   YellowPages: {
     screen: YellowPages,
@@ -22,6 +33,7 @@ export const FeedStack = StackNavigator({
   },
 });
 
+// Tabs is the main component of our Application, which currently serves YellowPages, Attendance, and Important Links
 export const Tabs = TabNavigator({
   YellowPages: {
     screen: FeedStack,
@@ -59,12 +71,3 @@ export const Tabs = TabNavigator({
     } 
 }}
 );
-
-export const Root = StackNavigator({
-  Tabs: {
-    screen: Tabs,
-  },
-}, {
-  mode: 'modal',
-  headerMode: 'none',
-});
