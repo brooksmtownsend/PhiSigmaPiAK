@@ -25,10 +25,12 @@ project.xcworkspace
 # Android/IntelliJ
 #
 build/
+android/keystore
 .idea
 .gradle
 local.properties
 *.iml
+deployment_cert.der
 
 # node.js
 #
