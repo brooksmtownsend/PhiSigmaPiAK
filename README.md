@@ -13,7 +13,7 @@ The code for each ‘page’ or ‘view’ of the application can be found in th
 ### Attendance.js
 > Displays a field where users may enter a tinyurl path that directs them to tinyurl.com/<URLpath> when they push “Click Here to Sign In”. This screen is to be used in conjunction with the Recording Secretary, who generates attendance sign-in pages. The URLs of these sign-in pages should be converted into tinyurls, whose path names will serve as the ‘attendance code’ that users enter to sign in on the app. For example, if the URL for a sign-in page is tinyurl.com/phisigmapi, the user will enter “phisigmapi” as the attendance code in order to sign in.
 ### UsefulLinks.js
->Displays a WebView (React Native’s implementation of opening a browser within an application) that shows the Useful Links page on the Phi Sigma Pi website: https://phisigmapi.web.unc.edu/useful-links/ . The password to access this page is “squirrelschool”. This page should be frequently modified to reflect current information, and this may be done through web.unc.edu .
+>Displays a WebView (React Native’s implementation of opening a browser within an application) that shows the Useful Links page on the Phi Sigma Pi website: https://phisigmapi.web.unc.edu/useful-links/. This page should be frequently modified to reflect current information, and this may be done through web.unc.edu .
 ### YellowPages.js
 > Basically like the contacts app on your phone. Displays a list of Siblings that is pulled from directory.js in the ‘data’ folder of the ‘app’ directory. When a Sibling’s name is clicked on, a new page will open that displays more of that Sibling’s personal information.
 ### UserDetail.js
