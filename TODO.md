@@ -9,3 +9,6 @@
 
 #### iOS
 >- Fix venmo rich link
+
+#### Both Versions
+>- Add some sort of loading animation for the webviews

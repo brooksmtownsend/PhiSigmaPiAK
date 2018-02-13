@@ -1484,7 +1484,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.phisigmapialphakappa.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phisigmapiak.ios;
 				PRODUCT_NAME = FirstLookReactNavigation;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1513,7 +1513,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.phisigmapialphakappa.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phisigmapiak.ios;
 				PRODUCT_NAME = FirstLookReactNavigation;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
