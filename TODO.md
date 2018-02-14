@@ -12,3 +12,6 @@
 
 #### Both Versions
 >- Add some sort of loading animation for the webviews
+
+#### Personal Information Requests
+>- Taylor Smith wants newest profile picture, pronouns he/him/his
