@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, Clipboard } from 'react-native';
 import { Tile, List, ListItem } from 'react-native-elements';
 
 class UserDetail extends Component {
@@ -30,12 +30,14 @@ class UserDetail extends Component {
           <ListItem
             title="Initiate Class"
             rightTitle={iClass}
-            hideChevron
+            rightTitleStyle={{color:"#444"}}
+           hideChevron
           />
           <ListItem
             title="Preferred Pronouns"
             rightTitle={pronouns}
-            hideChevron
+            rightTitleStyle={{color:"#444"}}
+           hideChevron
           />
         </List>
 
@@ -43,11 +45,21 @@ class UserDetail extends Component {
           <ListItem
             title="Email"
             rightTitle={email}
+            rightTitleStyle={{color:"#444"}}
+            onPress={() => {
+              Clipboard.setString(""+email)
+              alert("Copied " + email + " to clipboard")
+            }}
             hideChevron
           />
           <ListItem
             title="Phone"
-            rightTitle={phone}
+            rightTitle={""+phone}
+            rightTitleStyle={{color:"#444"}}
+            onPress={() => {
+              Clipboard.setString(""+phone)
+              alert("Copied " + phone + " to clipboard")
+            }}
             hideChevron
           />
         </List>
