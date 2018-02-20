@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, WebView, TextInput, Button, TouchableOpacity, Keyboard } from 'react-native';
+import { View, Text, WebView, TextInput, Button, TouchableOpacity, Keyboard, ActivityIndicator } from 'react-native';
 
 /**
  * Attendance is our component for PSP event sign-in
@@ -23,6 +23,21 @@ export default class Attendance extends Component {
     this.setState({shouldRenderWebView: true});
   }
 
+  renderLoadingView() {
+    return (
+      <ActivityIndicator color="#0D6275" size="large" style={{
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
+        alignItems: 'center',
+        justifyContent: 'center',
+        zIndex: 99999
+    }}/>
+    );
+  }
+
   render() {
     return (
       <View style={{flex:1}}>
@@ -44,6 +59,7 @@ export default class Attendance extends Component {
         {this.state.shouldRenderWebView && <WebView
           source={{uri:'https://tinyurl.com/' + this.state.uriPath}}
           style={{marginTop:5, flex:1}}
+          renderLoading={this.renderLoadingView} startInLoadingState={true}
         /> }
       </View>
     );
