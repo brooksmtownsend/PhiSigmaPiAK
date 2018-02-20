@@ -14,7 +14,10 @@
 
 #### Both Versions
 >- Add some sort of loading animation for the webviews
+>- Make text on yellow pages black, not gray 
+>- Make phone numbers and emails callable / emailable
 
 #### Personal Information Requests
 >- Taylor Smith wants newest profile picture, pronouns he/him/his
 >- Add Roop to YellowPages
+>- Add David Clayton
