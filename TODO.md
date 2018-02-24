@@ -11,6 +11,7 @@
 #### iOS
 >- Fix venmo rich link
 >- Fix iPhone X styling, Attendance code page needs more padding and useful links page needs to extend to the top.
+>--https://medium.com/react-native-training/react-native-iphonex-92ff511282af
 
 #### Both Versions
 
