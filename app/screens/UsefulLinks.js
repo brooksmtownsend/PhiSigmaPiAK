@@ -23,6 +23,7 @@ class UsefulLinks extends Component {
     this.WebViewReference.goBack();
   }
 
+  // Function returns an activity indicator for idle loading
   renderLoadingView() {
     return (
       <ActivityIndicator color="#0D6275" size="large" style={{

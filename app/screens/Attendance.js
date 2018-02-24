@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, WebView, TextInput, Button, TouchableOpacity, Keyboard, ActivityIndicator, SafeAreaView } from 'react-native';
+import { View, Text, WebView, TextInput, Button, TouchableOpacity, Keyboard, ActivityIndicator, SafeAreaView, Image } from 'react-native';
 
 /**
  * Attendance is our component for PSP event sign-in
@@ -23,6 +23,7 @@ export default class Attendance extends Component {
     this.setState({shouldRenderWebView: true});
   }
 
+  // Function returns an activity indicator for idle loading
   renderLoadingView() {
     return (
       <ActivityIndicator color="#0D6275" size="large" style={{
@@ -58,8 +59,9 @@ export default class Attendance extends Component {
             style={{flex: 1}}
             accessibilityLabel="Attendance Button"
           />
-          {!this.state.shouldRenderWebView && <View>
-              <Text>This is where the picture will go</Text>
+          {/* Either renders instructions or the Attendance website depending on the state */}
+          {!this.state.shouldRenderWebView && <View style={{flex:1}}>
+              <Image style={{flex:1}} source={{uri:'https://i.imgur.com/szmHnsh.png'}} />
             </View>}
           {this.state.shouldRenderWebView && <WebView
             source={{uri:'https://tinyurl.com/' + this.state.uriPath}}
