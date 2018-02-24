@@ -58,9 +58,12 @@ export const Tabs = TabNavigator({
         android: {
           activeTintColor: '#fff',
           inactiveTintColor: '#fff',
-          tabStyle: {
+          style: {
             backgroundColor: "#0D6275"
-          } 
+          },
+          indicatorStyle: {
+            backgroundColor: "rgb(200,223,225)",
+          }
         },
         ios: {
           activeTintColor: '#0D6275',

@@ -2,20 +2,12 @@
 
 ## Release Version 1.1
 #### Android
->- Remove padding on top of Attendance and Links page for Android
->- Change color of Android Tab bar 
 >- Implement physical back button functionality for useful links page
->- Fix text field smushing 
 >- Fix bug where on launch requires a screen rotate to work.
 
 #### iOS
 >- Fix venmo rich link
->- Fix iPhone X styling, Attendance code page needs more padding and useful links page needs to extend to the top.
->--https://medium.com/react-native-training/react-native-iphonex-92ff511282af
 
 #### Both Versions
 
 #### Personal Information Requests
->- Taylor Smith wants newest profile picture, pronouns he/him/his
->- Add Roop to YellowPages
->- Add David Clayton

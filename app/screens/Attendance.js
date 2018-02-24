@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, WebView, TextInput, Button, TouchableOpacity, Keyboard, ActivityIndicator } from 'react-native';
+import { View, Text, WebView, TextInput, Button, TouchableOpacity, Keyboard, ActivityIndicator, SafeAreaView } from 'react-native';
 
 /**
  * Attendance is our component for PSP event sign-in
@@ -40,28 +40,34 @@ export default class Attendance extends Component {
 
   render() {
     return (
-      <View style={{flex:1}}>
-        <Text style={{marginTop: 30, alignSelf: 'center', fontSize: 20}}> Enter the attendance code below </Text>
-        <TextInput
-          style={{marginTop: 5, backgroundColor: '#fff', padding: 5, width: '80%', height: '7%', fontSize: 25, alignSelf: 'center'}}
-          onChangeText={(text) => this.setState({uriPath:text, shouldRenderWebView: false})}
-          autoCorrect={false}
-          autoCapitalize={'none'}
-          value={this.state.uriPath}
-          onEndEditing={() => this.renderWebView()}
-        />
-        <Button
-          onPress={() => this.renderWebView()}
-          title="Click here to sign in."
-          color="#227D7E"
-          accessibilityLabel="Attendance Button"
-        />
-        {this.state.shouldRenderWebView && <WebView
-          source={{uri:'https://tinyurl.com/' + this.state.uriPath}}
-          style={{marginTop:5, flex:1}}
-          renderLoading={this.renderLoadingView} startInLoadingState={true}
-        /> }
-      </View>
+      <SafeAreaView style={{flex:1}}>
+        <View style={{flex:1}}>
+          <Text style={{alignSelf: 'center', fontSize: 20}}> Enter the attendance code </Text>
+          <TextInput
+            style={{marginTop: 5, backgroundColor: '#fff', padding: 5, width: '80%', height: '7%', fontSize: 25, alignSelf: 'center', height: 40}}
+            onChangeText={(text) => this.setState({uriPath:text, shouldRenderWebView: false})}
+            autoCorrect={false}
+            autoCapitalize={'none'}
+            value={this.state.uriPath}
+            onEndEditing={() => this.renderWebView()}
+          />
+          <Button
+            onPress={() => this.renderWebView()}
+            title="Click here to sign in."
+            color="#0D6275"
+            style={{flex: 1}}
+            accessibilityLabel="Attendance Button"
+          />
+          {!this.state.shouldRenderWebView && <View>
+              <Text>This is where the picture will go</Text>
+            </View>}
+          {this.state.shouldRenderWebView && <WebView
+            source={{uri:'https://tinyurl.com/' + this.state.uriPath}}
+            style={{marginTop:5, flex:1}}
+            renderLoading={this.renderLoadingView} startInLoadingState={true}
+          /> }
+        </View>
+      </SafeAreaView>
     );
   }
 }
