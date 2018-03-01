@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, TouchableOpacity, WebView, ActivityIndicator, SafeAreaView } from 'react-native';
+import { Text, View, TouchableOpacity, WebView, ActivityIndicator, SafeAreaView, Platform } from 'react-native';
 
 class UsefulLinks extends Component {
 
@@ -41,9 +41,14 @@ class UsefulLinks extends Component {
 
   render() {
     const usefullinks = 'https://phisigmapi.web.unc.edu/useful-links/';
+    const iOSVersion = parseInt(Platform.Version, 10)
     return (
       <SafeAreaView style={{flex: 1}}>
-        <View style={{flex:1}}>
+      {/* Styling here is a hotfix for SafeAreaView not supporting iOS version < 11 */}
+        <View style={{
+          flex:1,
+          paddingTop: iOSVersion < 11 ? 20 : 0
+        }}>
           <WebView
             ref={(ref) => this.WebViewReference = ref}
             style={{flex: 1}}

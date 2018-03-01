@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, WebView, TextInput, Button, TouchableOpacity, Keyboard, ActivityIndicator, SafeAreaView, Image } from 'react-native';
+import { View, Text, WebView, TextInput, Button, TouchableOpacity, Keyboard, ActivityIndicator, SafeAreaView, Image, Platform } from 'react-native';
 
 /**
  * Attendance is our component for PSP event sign-in
@@ -40,9 +40,13 @@ export default class Attendance extends Component {
   }
 
   render() {
+    const iOSVersion = parseInt(Platform.Version, 10)
     return (
       <SafeAreaView style={{flex:1}}>
-        <View style={{flex:1}}>
+        <View style={{
+          flex:1,
+          paddingTop: iOSVersion < 11 ? 20 : 0
+          }}>
           <Text style={{alignSelf: 'center', fontSize: 20}}> Enter the attendance code </Text>
           <TextInput
             style={{marginTop: 5, backgroundColor: '#fff', padding: 5, width: '80%', height: '7%', fontSize: 25, alignSelf: 'center', height: 40}}
