@@ -1,6 +1,3 @@
-# Uncomment this when committing to public repo
-app/data/
-
 # OSX
 #
 .DS_Store
