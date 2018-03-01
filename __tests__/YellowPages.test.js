@@ -11,7 +11,11 @@ import YellowPages from '../app/screens/YellowPages'
 import UserDetail from '../app/screens/UserDetail'
 
 describe("YellowPages Functionality", () => {
-  it("can render correctly", () => {
+  it("renders correctly", () => {
+    const yellowPages = renderer.create(<YellowPages />).toJSON()
+    expect(yellowPages).toMatchSnapshot()
+  })
+  it("maps directory items to tiles", () => {
     const yellowPages = renderer.create(<YellowPages />)
     expect(yellowPages).not.toBeNull()
   })
