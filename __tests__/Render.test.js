@@ -29,12 +29,6 @@ describe('Application can', () => {
     );
     expect(tree).not.toBeNull();
   });
-  it('render YellowPages correctly', () => {
-    const tree = renderer.create(
-      <YellowPages />
-    );
-    expect(tree).not.toBeNull();
-  });
   it('render UserDetail correctly', () => {
     const tree = renderer.create(
       <UserDetail navigation={{state: {params:{

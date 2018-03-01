@@ -19,12 +19,10 @@ class UserDetail extends Component {
 
     return (
       <ScrollView>
-        {<Tile
+        <Tile
           imageSrc={{ uri: picture}}
           featured
-          title={''}
-          caption={''}
-        />}
+        />
 
         <List>
           <ListItem
