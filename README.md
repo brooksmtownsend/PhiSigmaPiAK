@@ -22,7 +22,13 @@ The code for each ‘page’ or ‘view’ of the application can be found in th
 # Installation / Modification
 If you want to edit this app or contribute (ex: Future IT committee) then you'll need to follow these steps:
 1. Clone the repository by running 
->```git clone https://github.com/brooksmtownsend/PhiSigApp-ReactNative.git```
+>```git clone https://github.com/brooksmtownsend/PhiSigmaPiAK.git```
 2. run ```npm install``` in the directory that you cloned the app into.
 3. You'll need to setup your device based on what platform you have. To run android you need to download Android Studio. To run iOS, you need to be on a Mac and download XCode.
 4. Open the project's corresponding folder ```./android``` or ```./ios``` in the IDE, run and build the project.
+
+# COMING SOON
+
+### Firebase Integration
+> Allowing users to authenticate and log in so that apps can be released publicly to the play store without exposure of personal information
+> Notifications that can inform users of important Phi Sig events
